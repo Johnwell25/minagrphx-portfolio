@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minagrphx — Graphic Design Studio</title>
+<meta name="description" content="Minagrphx is a graphic design studio working across identity, editorial and packaging — built on a visible grid.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="bg-grid" aria-hidden="true">
+  <div class="bg-grid__cols"></div>
+  <div class="bg-grid__baseline"></div>
+</div>
+<div class="crosshair" aria-hidden="true"><span class="crosshair__label"></span></div>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="brand__mark">◆</span>MINAGRPHX</a>
+    <div class="nav-links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="nav-cta">Start a project</a>
+    <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-panel" aria-hidden="true">
+  <a href="index.html" aria-current="page">Home</a>
+  <a href="work.html">Work</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<main>
+
+  <section class="hero wrap">
+    <p class="eyebrow" data-reveal>Studio — Est. 2018</p>
+    <h1 class="display-1 hero__title" data-reveal>
+      Design, <em>structured</em> around the grid.
+    </h1>
+    <div class="hero__foot">
+      <p class="lede" data-reveal>Minagrphx is a graphic design studio working across identity, editorial and packaging — for clients who want their system to hold up under scrutiny.</p>
+      <div class="hero__scroll" data-reveal>
+        <span class="hero__scroll-line"></span>
+        Scroll
+      </div>
+    </div>
+  </section>
+
+  <section class="border-top wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" data-reveal>Selected work</p>
+        <h2 class="display-2" data-reveal>Three recent systems.</h2>
+      </div>
+      <a href="work.html" class="btn" data-reveal>
+        View all work <span class="btn__arrow">→</span>
+      </a>
+    </div>
+    <div class="p-grid" data-home-grid></div>
+  </section>
+
+  <section class="border-top wrap">
+    <div class="about-hero">
+      <h2 class="display-2" data-reveal>We treat the grid as the brief's first honest answer, not its last constraint.</h2>
+      <div data-reveal>
+        <p class="lede">Every mark, page and package starts on the same structure it ships on — nothing decorative gets added that the system can't justify.</p>
+        <a href="about.html" class="text-link mono-tag" style="display:inline-block;margin-top:20px;">More about the studio →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer wrap">
+  <div class="footer-top">
+    <h2 class="display-3 footer-cta" data-reveal>Have a system that needs building?</h2>
+    <a href="contact.html" class="btn btn--solid" data-reveal>Start a project <span class="btn__arrow">→</span></a>
+  </div>
+  <div class="footer-cols">
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Direct</h4>
+      <a href="mailto:hello@minagrphx.studio">hello@minagrphx.studio</a>
+      <span>Manila, PH</span>
+    </div>
+    <div class="footer-col">
+      <h4>Elsewhere</h4>
+      <a href="#">Instagram</a>
+      <a href="#">Behance</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Minagrphx Studio</span>
+    <span>Press "G" for the grid</span>
+  </div>
+</footer>
+
+<button class="grid-toggle" aria-pressed="false">
+  <span class="dot"></span> Grid
+</button>
+
+<div class="detail" aria-hidden="true">
+  <div class="detail__scrim"></div>
+  <div class="detail__panel">
+    <button class="detail__close" aria-label="Close">✕</button>
+    <div class="detail__art"></div>
+    <div class="detail__body">
+      <div>
+        <p class="eyebrow"><span data-d-coord></span></p>
+        <h3 class="display-3" data-d-title style="margin-top:14px;"></h3>
+        <p class="lede" data-d-summary style="margin-top:18px;"></p>
+      </div>
+      <div class="detail__meta-row">
+        <div><span class="mono-tag">Role</span><span data-d-role></span></div>
+        <div><span class="mono-tag">Client</span><span data-d-client></span></div>
+        <div><span class="mono-tag">Year</span><span data-d-year></span></div>
+        <div><span class="mono-tag">Category</span><span data-d-cat></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
